@@ -40,7 +40,7 @@ async function bubbleSort(arr) {
         arr[j] = arr[j + 1];
         arr[j+1] = temp;
         const h = document.getElementsByClassName("commands");
-        h[0].innerHTML += "<br>" + st + arr[j] + " is greater then " + arr[j+1] + " so swap " + arr[j] + " with " + arr[j+1];
+        h[0].innerHTML += "<br>" + st + arr[j] + " is greater then " + arr[j] + " so swap " + arr[j+1] + " with " + arr[j+1];
         console.log(arr[j] + " is greater then " + arr[j+1] + " so swap " + arr[j] + " with " + arr[j+1]);
         collection[j].innerHTML = arr[j];
         collection[j+1].innerHTML = arr[j+1];
