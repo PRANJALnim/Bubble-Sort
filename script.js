@@ -3,7 +3,8 @@ var arr = [];
 
 for (var i = 0; i < size; i++) {
   var element = prompt("Enter element at index " + i);
-  arr.push(element);
+  Number(element);
+  arr.push(Number(element));
 }
 
 var container = document.getElementById("con");
@@ -19,7 +20,7 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-let button = document.getElementById("togglee");
+let button = document.getElementById("but");
 
 button.addEventListener("click", function() {
   button.style.visibility = "hidden";
@@ -39,12 +40,12 @@ async function bubbleSort(arr) {
         var temp = arr[j];
         arr[j] = arr[j + 1];
         arr[j+1] = temp;
-        const h = document.getElementsByClassName("commands");
-        h[0].innerHTML += "<br>" + st + arr[j] + " is greater then " + arr[j+1] + " so swap " + arr[j] + " with " + arr[j+1];
-        console.log(arr[j] + " is greater then " + arr[j+1] + " so swap " + arr[j] + " with " + arr[j+1]);
         collection[j].innerHTML = arr[j];
         collection[j+1].innerHTML = arr[j+1];
+        const h = document.getElementsByClassName("commands");
+        h[0].innerHTML += "<br>" + arr[j+1] + " is greater then " + arr[j] + " so swaping them";
       }
+      
       collection[j].style.backgroundColor = "#2196F3";
       collection[j+1].style.backgroundColor = "#2196F3";
     }
