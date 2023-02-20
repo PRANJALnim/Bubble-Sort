@@ -37,6 +37,9 @@ async function bubbleSort(arr) {
       collection[j+1].style.backgroundColor = "#00437a";
       await sleep(1000);
       if(arr[j] > arr[j+1]) {
+        collection[j].style.backgroundColor = "red";
+        collection[j+1].style.backgroundColor = "red";
+        await sleep(500);
         var temp = arr[j];
         arr[j] = arr[j + 1];
         arr[j+1] = temp;
@@ -44,6 +47,8 @@ async function bubbleSort(arr) {
         collection[j+1].innerHTML = arr[j+1];
         const h = document.getElementsByClassName("commands");
         h[0].innerHTML += "<br>" + arr[j+1] + " is greater then " + arr[j] + " so swaping them";
+        collection[j].style.backgroundColor = "#00437a";
+        collection[j+1].style.backgroundColor = "#00437a";
       }
       
       collection[j].style.backgroundColor = "#2196F3";
